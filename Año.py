@@ -14,25 +14,16 @@ c=año%400
 
 #PROCESING
 
-if año>=-46:
-    if año>=1582:
-        if a==0:
-             if b==0:
-                 if c==0:
-                     rta="El año es bisiesto"
-                 else: 
-                     rta="El año no es bisiesto"
-             else:
-                 rta="El año es bisiesto"
-        else:
-             rta="El año no es bisiesto"
-    else: 
-        if a==0:
-            rta="El año es bisiesto"
-        else:
-            rta="El año no es bisiesto"
+if año>=1582 and a==0 and b==0 and c==0:
+    rta="El año es bisiesto"
+elif año>=1582 and a==0 and b!=0:
+    rta="El año es bisiesto"
+elif año <1582 and año>=-46 and a==0:
+    rta="El año es bisiesto"
+elif año<-46:
+    rta="En esta epoca no existian los años bisiestos"
 else:
-    rta="En este año no existian los años bisiestos"
+    rta="El año no es bisiesto"
 
 #OUTPUT
 
